@@ -19,8 +19,7 @@ import requests
 import warnings
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 
-ses = lt.session()
-ses.listen_on(6881, 6891)  # No warning shown now
+
 
 TMP_DIR = "./.tmp/files"
 
@@ -288,6 +287,8 @@ def man():
 
 def download_torrent_linux(path):
     import libtorrent as lt
+    ses = lt.session()
+    ses.listen_on(6881, 6891)  # No warning shown now
     try:
         if not os.path.exists(path):
             print(f"{COLORS.red}Error: .torrent not found{COLORS.reset}")
