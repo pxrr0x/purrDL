@@ -15,11 +15,11 @@
 #### Install dependencies (git, python):
  - For Linux
     - ```sudo apt update```
-    - ```sudo apt install git python3 python3-pip -y```
+    - ```sudo apt install git python3 -y```
  - For Android(Termux)
     - <a href="https://github.com/termux/termux-app/releases/tag/v0.118.1">Download and install Termux here</a>
     - ```apt update && apt upgrade -y```
-    - ```apt install git python3 python3-pip -y```
+    - ```apt install git python3 -y```
   
 #### Clone this repository
  - ```git clone https://github.com/pxrr0x/purrDL.git```
