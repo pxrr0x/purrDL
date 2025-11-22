@@ -10,7 +10,6 @@ Description: turboG or turboGranny is a CLI Python utility that scrapes YTS, ret
 """
 
 from bs4 import BeautifulSoup
-import libtorrent as lt
 import os
 import platform
 import subprocess
@@ -288,6 +287,7 @@ def man():
 
 
 def download_torrent_linux(path):
+    import libtorrent as lt
     try:
         if not os.path.exists(path):
             print(f"{COLORS.red}Error: .torrent not found{COLORS.reset}")

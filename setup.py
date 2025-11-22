@@ -55,7 +55,7 @@ def dependencies(env):
             subprocess.run(["apt", "install","aria2", "-y"], check=True)
             subprocess.run(["pkg", "update", "-y"], check=True)
             subprocess.run(["apt", "install", "ruby", "python3", "curl","-y"], check=True)
-            subprocess.run(["apt", "install", "libxml2", "libxslt"]) #these 2 are needed for lxml
+            subprocess.run(["apt", "install", "libxml2", "libxslt", "-y"]) #these 2 are needed for lxml
             subprocess.run(["gem", "install", "lolcat"], check=True) # For cololized text effect
             subprocess.run(["pip3", "install", "requests", "beautifulsoup4", "cython"], check=True) # cython isfor lxml also
             print(f"\n{bold}lxml may take a while to build.\nPlease don't interrupt.{reset}")
@@ -69,7 +69,7 @@ def dependencies(env):
             print(f"{bold}Installing dependencies for Linux{reset}")
             # subprocess.run(["sudo", "apt", "update", "-y"], check=True)
             subprocess.run(["sudo", "apt", "install", "python3", "ruby", "lolcat", "curl", "-y"], check=True)
-            subprocess.run(["sudo", "apt", "install", "python3-bs4", "python3-requests", "python3-libtorrent", "python3-lxml"], check=True)
+            subprocess.run(["sudo", "apt", "install", "python3-bs4", "python3-requests", "python3-libtorrent", "python3-lxml", "-y"], check=True)
             subprocess.run(["python3", "-m","pip", "install", "beautifulsoup4", "requests", "lxml", "libtorrent"], check=True) # Use this if you prefer pip
 
         else:
